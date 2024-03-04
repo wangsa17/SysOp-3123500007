@@ -4,7 +4,7 @@
 </div>
 <br />
 <div align="center">
-  <assets/img src="https://upload.wikimedia.org/wikipedia/id/4/44/Logo_PENS.png" alt="Logo PENS">
+  <img src="https://upload.wikimedia.org/wikipedia/id/4/44/Logo_PENS.png" alt="Logo PENS">
   <h3 style="text-align: center;">Disusun Oleh : </h3>
   <p style="text-align: center;">
     <strong>Dewangga Wahyu Putera Wangsa (3123500007)</strong><br>
