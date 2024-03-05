@@ -21,6 +21,7 @@
 1. [Pendahuluan](#pendahuluan)
 2. [Soal](#proses-booting)
 3. [Instalisasi](#instalisasi)
+4. [Referensi](#referensi)
 
 ## PENDAHULUAN
 
@@ -30,25 +31,43 @@ Sistem operasi (disingkat OS) adalah perangkat lunak fundamental yang mengelola 
 
 ### Apa itu booting?
 
-Booting adalah proses yang dilakukan komputer pada saat dinyalakan hingga siap digunakan. Booting berasal dari kata boot yang merupakan singkatan dari bootstrap atau bootstrapping. Bootstrap menggambarkan proses yang secara otomatis memuat dan menjalankan perintah. Selama proses booting ini akan memuat beberapa kode ke dalam memori (RAM) yang diperlukan untuk memulai Windows sehingga siap untuk digunakan.
+Booting adalah proses yang dilakukan komputer pada saat dinyalakan hingga siap digunakan. Sebagian kita juga mengenal istilah booting sebagai proses startup komputer.
+
+Booting berasal dari kata boot yang merupakan singkatan dari bootstrap atau bootstrapping. Bootstrap menggambarkan proses yang secara otomatis memuat dan menjalankan perintah.
+
+Selama proses booting ini akan memuat beberapa kode ke dalam memori (RAM) yang diperlukan untuk memulai Windows sehingga siap untuk digunakan.
 
 ### Proses terjadinya Booting
 
-1. Menekan Tombol Power On: Saat tombol daya ditekan atau sumber daya lainnya diaktifkan, listrik mengalir ke komponen-komponen perangkat keras komputer.
+![App Screenshot](assets/img/booting/booting.gif)
 
-2. POST (Power-On Self-Test): BIOS (Basic Input/Output System) memulai POST. Ini adalah serangkaian tes yang dilakukan oleh BIOS untuk memeriksa keberadaan dan keadaan komponen-komponen utama seperti CPU, RAM, dan kartu grafis. Jika ada masalah, BIOS akan mengeluarkan peringatan berupa bunyi beep atau kode kesalahan di layar.
+1. Menekan Tombol Power On
+   ![App Screenshot](assets/img/booting/power-on.jpg)
+   Saat Anda menyalakan komputer, daya listrik mengalir ke komponen-komponen utama, termasuk motherboard dan prosesor.
 
-3. Inisialisasi Perangkat Keras: Setelah berhasil melewati POST, BIOS akan menginisialisasi perangkat keras lainnya seperti keyboard, mouse, hard disk, dan perangkat penyimpanan lainnya. BIOS juga mengidentifikasi perangkat-perangkat ini dan menentukan cara berkomunikasi dengan mereka.
+2. POST (Power-On Self-Test)
+   ![App Screenshot](assets/img/booting/post.png)
+   Komputer melakukan POST untuk memeriksa dan mengidentifikasi hardware utama seperti RAM, prosesor, dan kartu grafis. Jika ada masalah, komputer bisa memberikan beep atau pesan kesalahan.
 
-4. Boot Loader: Setelah semua perangkat keras diinisialisasi, BIOS mencari boot loader yang terletak di lokasi tertentu di media penyimpanan, seperti Master Boot Record (MBR) di hard disk atau EFI System Partition (ESP) pada sistem yang menggunakan UEFI (Unified Extensible Firmware Interface). Boot loader seperti GRUB (Grand Unified Bootloader) atau NTLDR (New Technology Loader) memuat sistem operasi ke dalam memori.
+3. BIOS/UEFI Initialization
+   ![App Screenshot](assets/img/booting/BIOS&UEFI.png)
+   BIOS (Basic Input/Output System) atau UEFI (Unified Extensible Firmware Interface) diaktifkan. Ini adalah perangkat lunak firmware yang terletak di motherboard. BIOS/UEFI memberikan instruksi awal dan menginisialisasi perangkat keras yang diperlukan.
 
-5. Memuat Sistem Operasi: Boot loader memuat kernel dari sistem operasi ke dalam memori. Kernel adalah bagian inti dari sistem operasi yang bertanggung jawab atas manajemen sumber daya perangkat keras, jaringan, dan proses. Setelah kernel dimuat, kontrol diserahkan sepenuhnya kepada sistem operasi.
+4. Boot Loader
+   ![App Screenshot](assets/img/booting/boot-priority.jpg)
+   Setelah BIOS/UEFI diinisialisasi, boot loader diaktifkan. Boot loader adalah program kecil yang bertanggung jawab untuk memuat sistem operasi ke dalam memori.
 
-6. Inisialisasi Sistem Operasi: Sistem operasi melakukan inisialisasi lebih lanjut, termasuk mengaktifkan layanan sistem, memuat driver perangkat keras tambahan, dan menyiapkan lingkungan untuk pengguna.
+5. Sistem Operasi Loading
+   ![App Screenshot](assets/img/booting/loading-os.png)
+   Boot loader membaca informasi tentang sistem operasi yang akan dimuat, biasanya dari partisi boot pada hard drive. Kemudian, sistem operasi dimuat ke dalam memori.
 
-7. Login: Terakhir, sistem operasi akan menampilkan layar login atau masuk langsung ke desktop, tergantung pada konfigurasi pengguna. Pengguna kemudian dapat memasukkan kredensial mereka untuk mengakses sistem.
+6. Kernel Initialization
+   ![App Screenshot](assets/img/booting/kernel.jpg)
+   Setelah sistem operasi dimuat, kernel (inti) sistem operasi diinisialisasi. Kernel bertanggung jawab untuk mengelola sumber daya komputer dan menjalankan proses-proses utama.
 
-8. Setelah proses ini selesai, perangkat siap digunakan oleh pengguna. Proses booting ini biasanya berlangsung dalam waktu beberapa detik hingga beberapa menit, tergantung pada kecepatan perangkat keras dan sistem operasi yang digunakan.
+7. Login atau Tampilan GUI
+   ![App Screenshot](assets/img/booting/lockscreen.png)
+   Terakhir, sistem operasi menampilkan layar login atau antarmuka pengguna (GUI) yang memungkinkan pengguna untuk masuk dan mulai menggunakan komputer.
 
 ## Instalisasi
 
@@ -194,3 +213,10 @@ Booting adalah proses yang dilakukan komputer pada saat dinyalakan hingga siap d
     ![App Screenshot](assets/img/install_db/55.png)
 57. Setelah selesai maka tampilan anda akan seperti dibawah ini, linux debian siap digunakan
     ![App Screenshot](assets/img/install_db/56.png)
+
+## Referensi
+
+- [Apa itu Booting](https://www.jetorbit.com/blog/mengenal-apa-itu-booting-fungsi-serta-jenis-jenis-booting/)
+- [Proses Booting](https://catatanteknisi.com/pengertian-dan-urutan-proses-booting-komputer/)
+- [Download Virtual Box](https://www.virtualbox.org/)
+- [Download Debian](https://www.debian.org/download)
