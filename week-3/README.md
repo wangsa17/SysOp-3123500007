@@ -47,8 +47,11 @@
 ### 3. How to Run Program FLOPS and IOPS
 
 ketik perintah **make** pada direktory flops-iops untuk menjalankan file **makefile**
+
 ![App Screenshot](assets/img/make.jpg)
+
 ketik perintah **make clean** untuk me-refresh file execute yang di buat dari menjalankan file **makefile**
+
 ![App Screenshot](assets/img/make_clean.jpg)
 
 ### 4. Run program FLOPS
