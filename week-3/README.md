@@ -19,48 +19,129 @@
 ## Daftar Isi
 
 1. [PPT](#ppt)
-2. [FLOPS dan IOPS](#flops-dan-iops)
+2. [Laporan Benchmark FLOPS dan IOPS](#flops-dan-iops)
    - [Install gcc, make, dan git](#install-gcc-make-dan-git)
    - [How to run FLOPS dan IOPS](#how-to-run-flops-dan-iops)
    - [Tabel Pengujian](#tabel-pengujian)
    - [Analisa](#analisa)
 3. [Referensi](#referensi)
 
-## PPT
+## PPT Siklus SPU
 
 [Link PPT](https://www.canva.com/design/DAF_FjVZneE/mGYFV4pIDyYAnDvjwu0qfg/view?utm_content=DAF_FjVZneE&utm_campaign=designshare&utm_medium=link&utm_source=editor)
 
-## FlOPS dan IOPS
+## Laporan Benchmark FlOPS dan IOPS
 
-### Install GCC, make, dan GIT
+### 1. Install GCC, make, dan GIT
 
-![App Screenshot](assets/img/install_gcc_make_git.png)
+![App Screenshot](assets/img/install_gcc_make_git.jpg)
 
-### How to run FLOPS dan IOPS
+### 2. Download repo dengan cara clone di Git
 
-![App Screenshot](assets/img/run_flops_iops.jpg)
+![App Screenshot](assets/img/cloning.jpg)
 
-1. Awang
-   Percobaan FLOPS64 5 kali
-   ![App Screenshot](assets/img/awang_flops.jpg)
-   Percobaan IOPS64 5 kali
-   ![App Screenshot](assets/img/awang_iops.jpg)
-2. Hawa
-   Percobaan FLOPS64 5 kali
-   ![App Screenshot](assets/img/flops64_1.png)
-   ![App Screenshot](assets/img/flops64_2.png)
-   Percobaan IOPS64 5 kali
-   ![App Screenshot](assets/img/flops64_3.png)
-   ![App Screenshot](assets/img/flops64_4.png)
-3. Vonda
-   Percobaan FLOPS64 5 kali
-   ![App Screenshot](assets/img/vonda1.png)
-   ![App Screenshot](assets/img/vonda2.png)
-   Percobaan IOPS64 5 kali
-   ![App Screenshot](assets/img/vonda3.png)
-   ![App Screenshot](assets/img/vonda4.png)
+### 3. How to Run Program FLOPS and IOPS
 
-### Tabel Pengujian
+ketik perintah **make** pada direktory flops-iops untuk menjalankan file **makefile**
+![App Screenshot](assets/img/make.jpg)
+ketik perintah **make clean** untuk me-refresh file execute yang di buat dari menjalankan file **makefile**
+![App Screenshot](assets/img/make_clean.jpg)
+
+### 4. Run program FLOPS
+
+- Run Program Pertama
+
+Hasil Run Program Dewangga Wahyu
+![App Screenshot](assets/img/awang_flops1.jpg)
+Hasil Run Program Hawa Kharisma
+![App Screenshot](assets/img/hawa_f1.png)
+Hasil Run Program Bayu Ariyo Vonda
+![App Screenshot](assets/img/vonda_f1.png)
+
+- Run Program Kedua
+
+Hasil Run Program Dewangga Wahyu
+![App Screenshot](assets/img/awang_flops2.jpg)
+Hasil Run Program Hawa Kharisma
+![App Screenshot](assets/img/hawa_f2.png)
+Hasil Run Program Bayu Ariyo Vonda
+![App Screenshot](assets/img/vonda_f2.png)
+
+- Run Program Ketiga
+
+Hasil Run Program Dewangga Wahyu
+![App Screenshot](assets/img/awang_flops3.jpg)
+Hasil Run Program Hawa Kharisma
+![App Screenshot](assets/img/hawa_f3.png)
+Hasil Run Program Bayu Ariyo Vonda
+![App Screenshot](assets/img/vonda_f3.png)
+
+- Run Program Keempat
+
+Hasil Run Program Dewangga Wahyu
+![App Screenshot](assets/img/awang_flops4.jpg)
+Hasil Run Program Hawa Kharisma
+![App Screenshot](assets/img/hawa_f4.png)
+Hasil Run Program Bayu Ariyo Vonda
+![App Screenshot](assets/img/vonda_f4.png)
+
+- Run Program Kelima
+
+Hasil Run Program Dewangga Wahyu
+![App Screenshot](assets/img/awang_flops5.jpg)
+Hasil Run Program Hawa Kharisma
+![App Screenshot](assets/img/hawa_f5.png)
+Hasil Run Program Bayu Ariyo Vonda
+![App Screenshot](assets/img/vonda_f5.png)
+
+### 5. Run program IOPS
+
+- Run Program Pertama
+
+Hasil Run Program Dewangga Wahyu
+![App Screenshot](assets/img/awang_iops1.jpg)
+Hasil Run Program Hawa Kharisma
+![App Screenshot](assets/img/hawa_i1.png)
+Hasil Run Program Bayu Ariyo Vonda
+![App Screenshot](assets/img/vonda_i1.png)
+
+- Run Program Kedua
+
+Hasil Run Program Dewangga Wahyu
+![App Screenshot](assets/img/awang_iops2.jpg)
+Hasil Run Program Hawa Kharisma
+![App Screenshot](assets/img/hawa_i2.png)
+Hasil Run Program Bayu Ariyo Vonda
+![App Screenshot](assets/img/vonda_i2.png)
+
+- Run Program Ketiga
+
+Hasil Run Program Dewangga Wahyu
+![App Screenshot](assets/img/awang_iops3.jpg)
+Hasil Run Program Hawa Kharisma
+![App Screenshot](assets/img/hawa_i3.png)
+Hasil Run Program Bayu Ariyo Vonda
+![App Screenshot](assets/img/vonda_i3.png)
+
+- Run Program Keempat
+
+Hasil Run Program Dewangga Wahyu
+![App Screenshot](assets/img/awang_iops4.jpg)
+Hasil Run Program Hawa Kharisma
+![App Screenshot](assets/img/hawa_i4.png)
+Hasil Run Program Bayu Ariyo Vonda
+![App Screenshot](assets/img/vonda_i4.png)
+
+- Run Program Kelima
+
+Hasil Run Program Dewangga Wahyu
+![App Screenshot](assets/img/awang_iops5.jpg)
+Hasil Run Program Hawa Kharisma
+![App Screenshot](assets/img/hawa_i5.png)
+Hasil Run Program Bayu Ariyo Vonda
+![App Screenshot](assets/img/vonda_i5.png)
+
+### 6. Tabel Pengujian
 
 | Nama Anggota | Max Single Core FLOPS | Max Single Core IOPS | Max CPU FLOPS | Max CPU IOPS |
 | ------------ | --------------------- | -------------------- | ------------- | ------------ |
@@ -68,14 +149,14 @@
 | Hawa         | 2.2                   | 1.9                  | 4.3           | 3.8          |
 | Vonda        | 6                     | 4.5                  | 11.9          | 9            |
 
-#### Analisa
+### 7. Analisa
 
 Dari data yang ditunjukkan oleh table diatas menunjukkan bahwa setiap laptop dengan ketidaksamaan processor menyebabkan hasil dari test FLOPS dan IOPS berbeda-beda tergantung kecepatan dari masing-masing CPU/processor.
 Mulai dari **Awang** dengan spesifikasi **Processor 11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz, 2995 Mhz, 2 Core(s), 4 Logical Processor(s)**, untuk spesifikasi yang ada di debian menggunakan 2 core, bisa memperoleh angka 5.3 Gigaflops dan 5.2 Gigaiops di single core dan Max CPU berada di angka 10.5 Gigaflops dan 10.3 Gigaiops.
 Lalu **Hawa** dengan spesifikasi **Processor Intel(R) Celeron(R) N4000 CPU @ 1.10GHz, 1101 Mhz, 2 Core(s), 2 Logical Processor(s)**, untuk spesifikasi yang ada di debian menggunakan 2 core, bisa memperoleh angka 4.3 Gigaflops dan 3.8 Gigaiops di single core dan Max CPU berada di angka 2.2 Gigaflops dan 1.9 Gigaiops.
 lalu **vonda** dengan spesifikasi **13th Gen Intel(R) Core(TM) i5-13500H, 2600 Mhz, 12 Core(s), 16 Logical Proces**, untuk spesifikasi yang ada di debian menggunakan 2 core, bisa memperoleh angka 6 Gigaflops dan 4.5 Gigaiops di single core dan Max CPU berada di angka 11.9 Gigaflops dan 9 Gigaiops.
 
-### Kesimpulan
+### 8. Kesimpulan
 
 Dari percobaan kelompok kami, bisa ditarik kesimpulan bahwa Perbandingan antara FLOPS dan IOPS tidak langsung karena keduanya mengukur aspek yang berbeda dari kinerja sistem komputasi. FLOPS lebih berkaitan dengan kemampuan prosesor untuk melakukan perhitungan matematika, sedangkan IOPS lebih berkaitan dengan kemampuan sistem penyimpanan untuk mengakses dan memanipulasi data. Meskipun keduanya merupakan ukuran kinerja yang penting dalam konteks tertentu, mereka tidak dapat secara langsung dibandingkan atau ditukar-tukar karena masing-masing mengukur aspek yang berbeda dari kinerja sistem komputasi.
 
