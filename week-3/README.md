@@ -20,10 +20,14 @@
 
 1. [PPT](#ppt)
 2. [Laporan Benchmark FLOPS dan IOPS](#flops-dan-iops)
-   - [Install gcc, make, dan git](#install-gcc-make-dan-git)
-   - [How to run FLOPS dan IOPS](#how-to-run-flops-dan-iops)
-   - [Tabel Pengujian](#tabel-pengujian)
-   - [Analisa](#analisa)
+   - [Install gcc, make, dan git](#1-install-gcc-make-dan-git)
+   - [Download repo dengan cara clone di GIT](#2-download-repo-dengan-cara-clone-di-git)
+   - [How to Run Program FLOPS and IOPS](#3-how-to-run-program-flops-and-iops)
+   - [Run program FLOPS](#4-run-program-flops)
+   - [Run program IOPS](#5-run-program-iops)
+   - [Tabel Pengujian](#6-tabel-pengujian)
+   - [Analisa](#7-analisa)
+   - [Kesimpulan](#8-kesimpulan)
 3. [Referensi](#referensi)
 
 ## PPT Siklus SPU
@@ -49,96 +53,146 @@ ketik perintah **make clean** untuk me-refresh file execute yang di buat dari me
 
 ### 4. Run program FLOPS
 
-- Run Program Pertama
+- <strong>Run Program Pertama</strong>
 
 Hasil Run Program Dewangga Wahyu
+
 ![App Screenshot](assets/img/awang_flops1.jpg)
+
 Hasil Run Program Hawa Kharisma
+
 ![App Screenshot](assets/img/hawa_f1.png)
+
 Hasil Run Program Bayu Ariyo Vonda
+
 ![App Screenshot](assets/img/vonda_f1.png)
 
-- Run Program Kedua
+- <strong>Run Program Kedua</strong>
 
 Hasil Run Program Dewangga Wahyu
+
 ![App Screenshot](assets/img/awang_flops2.jpg)
+
 Hasil Run Program Hawa Kharisma
+
 ![App Screenshot](assets/img/hawa_f2.png)
+
 Hasil Run Program Bayu Ariyo Vonda
+
 ![App Screenshot](assets/img/vonda_f2.png)
 
-- Run Program Ketiga
+- <strong>Run Program Ketiga</strong>
 
 Hasil Run Program Dewangga Wahyu
+
 ![App Screenshot](assets/img/awang_flops3.jpg)
+
 Hasil Run Program Hawa Kharisma
+
 ![App Screenshot](assets/img/hawa_f3.png)
+
 Hasil Run Program Bayu Ariyo Vonda
+
 ![App Screenshot](assets/img/vonda_f3.png)
 
-- Run Program Keempat
+- <strong>Run Program Keempat</strong>
 
 Hasil Run Program Dewangga Wahyu
+
 ![App Screenshot](assets/img/awang_flops4.jpg)
+
 Hasil Run Program Hawa Kharisma
+
 ![App Screenshot](assets/img/hawa_f4.png)
+
 Hasil Run Program Bayu Ariyo Vonda
+
 ![App Screenshot](assets/img/vonda_f4.png)
 
-- Run Program Kelima
+- <strong>Run Program Kelima</strong>
 
 Hasil Run Program Dewangga Wahyu
+
 ![App Screenshot](assets/img/awang_flops5.jpg)
+
 Hasil Run Program Hawa Kharisma
+
 ![App Screenshot](assets/img/hawa_f5.png)
+
 Hasil Run Program Bayu Ariyo Vonda
+
 ![App Screenshot](assets/img/vonda_f5.png)
 
 ### 5. Run program IOPS
 
-- Run Program Pertama
+- <strong>Run Program Pertama</strong>
 
 Hasil Run Program Dewangga Wahyu
+
 ![App Screenshot](assets/img/awang_iops1.jpg)
+
 Hasil Run Program Hawa Kharisma
+
 ![App Screenshot](assets/img/hawa_i1.png)
+
 Hasil Run Program Bayu Ariyo Vonda
+
 ![App Screenshot](assets/img/vonda_i1.png)
 
-- Run Program Kedua
+- <strong>Run Program Kedua</strong>
 
 Hasil Run Program Dewangga Wahyu
+
 ![App Screenshot](assets/img/awang_iops2.jpg)
+
 Hasil Run Program Hawa Kharisma
+
 ![App Screenshot](assets/img/hawa_i2.png)
+
 Hasil Run Program Bayu Ariyo Vonda
+
 ![App Screenshot](assets/img/vonda_i2.png)
 
-- Run Program Ketiga
+- <strong>Run Program Ketiga</strong>
 
 Hasil Run Program Dewangga Wahyu
+
 ![App Screenshot](assets/img/awang_iops3.jpg)
+
 Hasil Run Program Hawa Kharisma
+
 ![App Screenshot](assets/img/hawa_i3.png)
+
 Hasil Run Program Bayu Ariyo Vonda
+
 ![App Screenshot](assets/img/vonda_i3.png)
 
-- Run Program Keempat
+- <strong>Run Program Keempat</strong>
 
 Hasil Run Program Dewangga Wahyu
+
 ![App Screenshot](assets/img/awang_iops4.jpg)
+
 Hasil Run Program Hawa Kharisma
+
 ![App Screenshot](assets/img/hawa_i4.png)
+
 Hasil Run Program Bayu Ariyo Vonda
+
 ![App Screenshot](assets/img/vonda_i4.png)
 
-- Run Program Kelima
+- <strong>Run Program Kelima</strong>
 
 Hasil Run Program Dewangga Wahyu
+
 ![App Screenshot](assets/img/awang_iops5.jpg)
+
 Hasil Run Program Hawa Kharisma
+
 ![App Screenshot](assets/img/hawa_i5.png)
+
 Hasil Run Program Bayu Ariyo Vonda
+
 ![App Screenshot](assets/img/vonda_i5.png)
 
 ### 6. Tabel Pengujian
