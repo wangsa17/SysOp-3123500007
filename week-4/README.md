@@ -113,11 +113,15 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
 ## Percobaan 1 : File descriptor
 
 1. Output ke layar (standar output), input dari system (kernel)
+
    ```
    $ ps
    ```
+
    Hasil Output
+
    ![App Screenshot](assets/img/Percobaan1_1.png)
+
 2. Output ke layar (standar output), input dari keyboard (standard input)
 
    ```
@@ -129,37 +133,59 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
     [Ctrl-d]
    ```
 
+   Hasil Output
+
    ![App Screenshot](assets/img/Percobaan1_2.png)
 
 3. Input nama direktori, output tidak ada (membuat direktori baru), bila terjadi error maka tampilan error pada layar (standard error)
+
    ```
    $ mkdir mydir
    $ mkdir mydir **(Terdapat pesan error)**
    ```
+
+   Hasil Output
+
    ![App Screenshot](assets/img/Percobaan1_3.png)
 
 ## Percobaan 2 : Pembelokan (redirection)
 
 1. Pembelokan standar output
+
    ```
     $ cat 1> myfile.txt
     Ini adalah teks yang saya simpan ke file myfile.txt
    ```
+
+   Hasil Output
+
    ![App Screenshot](assets/img/Percobaan2_1.png)
+
 2. Pembelokan standar input, yaitu input dibelokkan dari keyboard menjadi dari file
+
    ```
     $ cat 0< myfile.txt
     $ cat myfile.txt
    ```
+
+   Hasil Output
+
    ![App Screenshot](assets/img/Percobaan2_2.png)
+
 3. Pembelokan standar error untuk disimpan di file
+
    ```
     $ mkdir mydir (Terdapat pesan error)
     $ mkdir mydir 2> myerror.txt
     $ cat myerror.txt
    ```
+
+   Hasil Output
+
    ![App Screenshot](assets/img/Percobaan2_3.png)
+
 4. Notasi 2>&1 : pembelokan standar error (2>) adalah identik dengan file descriptor 1.
+
    ```
     $ ls filebaru (Terdapat pesan error)
     $ ls filebaru 2> out.txt
@@ -167,15 +193,25 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
     $ ls filebaru 2> out.txt 2>&
     $ cat out.txt
    ```
+
+   Hasil Output
+
    ![App Screenshot](assets/img/Percobaan2_4.png)
+
 5. Notasi 1>&2 (atau >&2) : pembelokan standar output adalah sama dengan file descriptor 2 yaitu standar error
+
    ```
    $ echo “mencoba menulis file” 1> baru
    $ cat filebaru 2> baru 1>&
    $ cat baru
    ```
+
+   Hasil Output
+
    ![App Screenshot](assets/img/Percobaan2_5.png)
+
 6. Notasi >> (append)
+
    ```
    $ echo “kata pertama” > surat
    $ echo “kata kedua” >> surat
@@ -184,8 +220,13 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
    $ echo “kata keempat” > surat
    $ cat surat
    ```
+
+   Hasil Output
+
    ![App Screenshot](assets/img/Percobaan2_6.png)
+
 7. Notasi here document (<<++ .... ++) digunakan sebagai pembatas input dari keyboard. Perhatikan bahwa tanda pembatas dapat digantikan dengan tanda apa saja, namun harus sama dan tanda penutup harus diberikan pada awal baris
+
    ```
    $ cat <<++
    Hallo, apa kabar?
@@ -198,12 +239,18 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
    Ok!
    %%%
    ```
+
+   Hasil Output
+
    ![App Screenshot](assets/img/Percobaan2_7.png)
+
 8. Notasi – (input keyboard) adalah representan input dari keyboard. Artinya menampilkan file 1, kemudian menampilkan input dari keyboard dan menampilkan file 2. Perhatikan bahwa notasi “-“ berarti menyelipkan input dari keyboard
 
 ```
 $ cat myfile.txt – surat
 ```
+
+Hasil Output
 
 ![App Screenshot](assets/img/Percobaan2_8.png)
 
@@ -222,6 +269,8 @@ $ cat myfile.txt – surat
    $ ls –l /etc | sort | more
    ```
 
+   Hasil Output
+
    ![App Screenshot](assets/img/Percobaan3_1_1.png)
 
    ![App Screenshot](assets/img/Percobaan3_1_2.png)
@@ -229,24 +278,40 @@ $ cat myfile.txt – surat
    ![App Screenshot](assets/img/Percobaan3_1_3.png)
 
 2. Untuk membelokkan standart output ke file, digunakan operator ">"
+
    ```
    $ echo hello
    $ echo hello > output
    $ cat output
    ```
+
+   Hasil Output
+
    ![App Screenshot](assets/img/Percobaan3_2.png)
+
 3. Untuk menambahkan output ke file digunakan operator ">>"
+
    ```
    $ echo bye >> output
    $ cat output
    ```
+
+   Hasil Output
+
    ![App Screenshot](assets/img/Percobaan3_3.png)
+
 4. Untuk membelokkan standart input digunakan operator "<"
+
    ```
    $ cat < output
    ```
+
+   Hasil Output
+
    ![App Screenshot](assets/img/Percobaan3_4.png)
+
 5. Pembelokan standart input dan standart output dapat dikombinasikan tetapi tidak boleh menggunakan nama file yang sama sebagai standart input dan output.
+
    ```
    $ cat < output > out
    $ cat out
@@ -258,11 +323,15 @@ $ cat myfile.txt – surat
    [Ctrl-c]
    $ cat out
    ```
+
+   Hasil Output
+
    ![App Screenshot](assets/img/Percobaan3_5.png)
 
 ## Percobaan 4 : Filter
 
 1. Pipa juga digunakan untuk mengkombinasikan utilitas sistem untuk membentuk fungsi yang lebih kompleks
+
    ```
     $ w –h | grep <user>
     $ grep <user> /etc/passwd
@@ -285,6 +354,9 @@ $ cat myfile.txt – surat
     $ cat kelas1.txt kelas2.txt > kelas.txt
     $ cat kelas.txt | sort | uniq
    ```
+
+   Hasil Output
+
    ![App Screenshot](assets/img/Percobaan4_1.png)
    ![App Screenshot](assets/img/Percobaan4_2.png)
    ![App Screenshot](assets/img/Percobaan4_3.png)
