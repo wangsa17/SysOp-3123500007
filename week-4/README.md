@@ -112,17 +112,26 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
 
 ## Percobaan 1 : File descriptor
 
+   <strong>
 1. Output ke layar (standar output), input dari system (kernel)
+   </strong>
 
-   ```
-   $ ps
-   ```
+```
+$ ps
+```
 
-   Hasil Output
+Hasil Output
 
-   ![App Screenshot](assets/img/Percobaan1_1.png)
+![App Screenshot](assets/img/Percobaan1_1.png)
+
+Analisa
+
+"$PS" digunakan untuk memperlihatkan proses yang sedang berjalan pada sistem kemudian diperlihatkan pada layar.
+
+   <strong>
 
 2. Output ke layar (standar output), input dari keyboard (standard input)
+   </strong>
 
    ```
     $ cat
@@ -137,7 +146,14 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
 
    ![App Screenshot](assets/img/Percobaan1_2.png)
 
+   Analisa
+
+   "$cat" digunakan untuk mengambil input dari keyboard dan kemudian output ditampilkan ke layar.
+
+   <strong>
+
 3. Input nama direktori, output tidak ada (membuat direktori baru), bila terjadi error maka tampilan error pada layar (standard error)
+   </strong>
 
    ```
    $ mkdir mydir
@@ -148,103 +164,149 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
 
    ![App Screenshot](assets/img/Percobaan1_3.png)
 
+   Analisa
+
+   "$ mkdir" merupakan perintah yang digunakan untuk membuat direktori atau folder baru. Inputan dari mkdir adalah nama dirrektori atau folder, sedangkan untuk outputnya tidak ada saat berhasil membuat direktori atau folder baru, bila terjadi error maka outputnya adalah mencetak error yaitu "mkdir: cannot create directory 'mydir' : File exists".
+
 ## Percobaan 2 : Pembelokan (redirection)
 
+<strong>
 1. Pembelokan standar output
+</strong>
 
-   ```
-    $ cat 1> myfile.txt
-    Ini adalah teks yang saya simpan ke file myfile.txt
-   ```
+```
+ $ cat 1> myfile.txt
+ Ini adalah teks yang saya simpan ke file myfile.txt
+```
 
-   Hasil Output
+Hasil Output
 
-   ![App Screenshot](assets/img/Percobaan2_1.png)
+![App Screenshot](assets/img/Percobaan2_1.png)
 
+Analisa
+
+`$ 1>` merupakan salah satu metode pembelokan pengganti standar output.
+
+<strong>
 2. Pembelokan standar input, yaitu input dibelokkan dari keyboard menjadi dari file
+</strong>
 
-   ```
-    $ cat 0< myfile.txt
-    $ cat myfile.txt
-   ```
+```
+ $ cat 0< myfile.txt
+ $ cat myfile.txt
+```
 
-   Hasil Output
+Hasil Output
 
-   ![App Screenshot](assets/img/Percobaan2_2.png)
+![App Screenshot](assets/img/Percobaan2_2.png)
 
-3. Pembelokan standar error untuk disimpan di file
+Analisa
 
-   ```
-    $ mkdir mydir (Terdapat pesan error)
-    $ mkdir mydir 2> myerror.txt
-    $ cat myerror.txt
-   ```
+`$ 0<` merupakan salah satu metode pembelokan standar input, yaitu input dibelokkan dari keyboard menjadi file.
 
-   Hasil Output
+<strong> 3. Pembelokan standar error untuk disimpan di file
+</strong>
 
-   ![App Screenshot](assets/img/Percobaan2_3.png)
+```
+ $ mkdir mydir (Terdapat pesan error)
+ $ mkdir mydir 2> myerror.txt
+ $ cat myerror.txt
+```
 
+Hasil Output
+
+![App Screenshot](assets/img/Percobaan2_3.png)
+
+Analisa
+
+`$ 2>` merupakan metode pembelokan standar error yang kemudian disimpan kedalam file
+
+<strong>
 4. Notasi 2>&1 : pembelokan standar error (2>) adalah identik dengan file descriptor 1.
+</strong>
 
-   ```
-    $ ls filebaru (Terdapat pesan error)
-    $ ls filebaru 2> out.txt
-    $ cat out.txt
-    $ ls filebaru 2> out.txt 2>&
-    $ cat out.txt
-   ```
+```
+ $ ls filebaru (Terdapat pesan error)
+ $ ls filebaru 2> out.txt
+ $ cat out.txt
+ $ ls filebaru 2> out.txt 2>&
+ $ cat out.txt
+```
 
-   Hasil Output
+Hasil Output
 
-   ![App Screenshot](assets/img/Percobaan2_4.png)
+![App Screenshot](assets/img/Percobaan2_4.png)
 
+Analisa
+
+`$ 2>&1` merupakan pembelokan standar error (2>) identik dengan file descriptor 1/
+
+<strong>
 5. Notasi 1>&2 (atau >&2) : pembelokan standar output adalah sama dengan file descriptor 2 yaitu standar error
+</strong>
 
-   ```
-   $ echo “mencoba menulis file” 1> baru
-   $ cat filebaru 2> baru 1>&
-   $ cat baru
-   ```
+```
+$ echo “mencoba menulis file” 1> baru
+$ cat filebaru 2> baru 1>&
+$ cat baru
+```
 
-   Hasil Output
+Hasil Output
 
-   ![App Screenshot](assets/img/Percobaan2_5.png)
+![App Screenshot](assets/img/Percobaan2_5.png)
 
+Analisa
+
+pembelokan standar output adalah sama dengan file descriptor 2 yaitu standar error.
+
+<strong>
 6. Notasi >> (append)
+</strong>
 
-   ```
-   $ echo “kata pertama” > surat
-   $ echo “kata kedua” >> surat
-   $ echo “kata ketiga” >> surat
-   $ cat surat
-   $ echo “kata keempat” > surat
-   $ cat surat
-   ```
+```
+$ echo “kata pertama” > surat
+$ echo “kata kedua” >> surat
+$ echo “kata ketiga” >> surat
+$ cat surat
+$ echo “kata keempat” > surat
+$ cat surat
+```
 
-   Hasil Output
+Hasil Output
 
-   ![App Screenshot](assets/img/Percobaan2_6.png)
+![App Screenshot](assets/img/Percobaan2_6.png)
 
-7. Notasi here document (<<++ .... ++) digunakan sebagai pembatas input dari keyboard. Perhatikan bahwa tanda pembatas dapat digantikan dengan tanda apa saja, namun harus sama dan tanda penutup harus diberikan pada awal baris
+Analisa
 
-   ```
-   $ cat <<++
-   Hallo, apa kabar?
-   Baik-baik saja?
-   Ok!
-   ++
-   $ cat <<%%%
-   Hallo, apa kabar?
-   Baik-baik saja?
-   Ok!
-   %%%
-   ```
+Notasi `>>` (append) digunakan untuk membelokkan tampilan standard output ke file tanpa menghapus isi dari file sebelumnya
 
-   Hasil Output
+<strong> 7. Notasi here document (<<++ .... ++) digunakan sebagai pembatas input dari keyboard. Perhatikan bahwa tanda pembatas dapat digantikan dengan tanda apa saja, namun harus sama dan tanda penutup harus diberikan pada awal baris
+</strong>
 
-   ![App Screenshot](assets/img/Percobaan2_7.png)
+```
+$ cat <<++
+Hallo, apa kabar?
+Baik-baik saja?
+Ok!
+++
+$ cat <<%%%
+Hallo, apa kabar?
+Baik-baik saja?
+Ok!
+%%%
+```
 
+Hasil Output
+
+![App Screenshot](assets/img/Percobaan2_7.png)
+
+Analisa
+
+Notasi here document (`<<++ .... ++`) digunakan sebagai pembatas input dari keyboard. Tanda pembatas dapat menggunakan tanda apa saja dengan syarat tanda penutup harus sama dengan tanda di awal baris, jika pada contoh diatas tanda pembatas menggunakan `++` dan `%%%`.
+
+<strong>
 8. Notasi – (input keyboard) adalah representan input dari keyboard. Artinya menampilkan file 1, kemudian menampilkan input dari keyboard dan menampilkan file 2. Perhatikan bahwa notasi “-“ berarti menyelipkan input dari keyboard
+</strong>
 
 ```
 $ cat myfile.txt – surat
@@ -254,120 +316,196 @@ Hasil Output
 
 ![App Screenshot](assets/img/Percobaan2_8.png)
 
+Analisa
+
+Notasi `–` (input keyboard) adalah representan input dari keyboard. Artinya menampilkan file 1, kemudian menampilkan input dari keyboard dan menampilkan file 2. Perhatikan bahwa notasi `-` berarti menyelipkan input dari keyboard
+
 ## Percobaan 3 : Pipa (pipeline)
 
+<strong>
 1. Operator pipa (|) digunakan untuk membuat eksekusi proses dengan melewati data langsung ke data lainnya.
+</strong>
 
-   ```
-   $ who
-   $ who | sort
-   $ who | sort –r
-   $ who > tmp
-   $ sort tmp
-   $ rm tmp
-   $ ls –l /etc | more
-   $ ls –l /etc | sort | more
-   ```
+```
+$ who
+$ who | sort
+$ who | sort –r
+$ who > tmp
+$ sort tmp
+$ rm tmp
+$ ls –l /etc | more
+$ ls –l /etc | sort | more
+```
 
-   Hasil Output
+Hasil Output
 
-   ![App Screenshot](assets/img/Percobaan3_1_1.png)
+![App Screenshot](assets/img/Percobaan3_1_1.png)
 
-   ![App Screenshot](assets/img/Percobaan3_1_2.png)
+![App Screenshot](assets/img/Percobaan3_1_2.png)
 
-   ![App Screenshot](assets/img/Percobaan3_1_3.png)
+![App Screenshot](assets/img/Percobaan3_1_3.png)
 
+Analisa
+
+Pipeline memungkinkan pengguna menggabungkan banyak perintah dengan mudah, menggabungkan input dan output dari satu perintah ke perintah berikutnya. Memproses dan menganalisis data secara langsung tanpa menyimpannya dalam file sementara sangat bermanfaat.
+
+<strong>
 2. Untuk membelokkan standart output ke file, digunakan operator ">"
+</strong>
 
-   ```
-   $ echo hello
-   $ echo hello > output
-   $ cat output
-   ```
+```
+$ echo hello
+$ echo hello > output
+$ cat output
+```
 
-   Hasil Output
+Hasil Output
 
-   ![App Screenshot](assets/img/Percobaan3_2.png)
+![App Screenshot](assets/img/Percobaan3_2.png)
 
-3. Untuk menambahkan output ke file digunakan operator ">>"
+Analisa
 
-   ```
-   $ echo bye >> output
-   $ cat output
-   ```
+Dengan menggunakan operator `>`, ubah standar output untuk disimpan ke dalam file, dan kemudian gunakan `cat` untuk mencetaknya.
 
-   Hasil Output
+<strong> 3. Untuk menambahkan output ke file digunakan operator ">>"
+</strong>
 
-   ![App Screenshot](assets/img/Percobaan3_3.png)
+```
+$ echo bye >> output
+$ cat output
+```
 
-4. Untuk membelokkan standart input digunakan operator "<"
+Hasil Output
 
-   ```
-   $ cat < output
-   ```
+![App Screenshot](assets/img/Percobaan3_3.png)
 
-   Hasil Output
+Analisa
 
-   ![App Screenshot](assets/img/Percobaan3_4.png)
+Dengan menggunakan operator `>>`, Kita dapat menambahkan output ke file tanpa menghapus isi file sebelumnya.
 
+<strong> 4. Untuk membelokkan standart input digunakan operator "<"
+</strong>
+
+```
+$ cat < output
+```
+
+Hasil Output
+
+![App Screenshot](assets/img/Percobaan3_4.png)
+
+Analisa
+
+Dengan menggunakan operator `<`, Anda dapat membelokkan standard input, yang berarti file output akan menjadi standard input.
+
+<strong> 
 5. Pembelokan standart input dan standart output dapat dikombinasikan tetapi tidak boleh menggunakan nama file yang sama sebagai standart input dan output.
+</strong>
 
-   ```
-   $ cat < output > out
-   $ cat out
-   $ cat < output >> out
-   $ cat out
-   $ cat < output > output
-   $ cat output
-   $ cat < out >> out (Proses tidak berhenti)
-   [Ctrl-c]
-   $ cat out
-   ```
+```
+$ cat < output > out
+$ cat out
+$ cat < output >> out
+$ cat out
+$ cat < output > output
+$ cat output
+$ cat < out >> out (Proses tidak berhenti)
+[Ctrl-c]
+$ cat out
+```
 
-   Hasil Output
+Hasil Output
 
-   ![App Screenshot](assets/img/Percobaan3_5.png)
+![App Screenshot](assets/img/Percobaan3_5.png)
+
+Analisa
+
+Meskipun pembelokan standar input dan output dapat digabungkan, nama file tidak boleh sama untuk keduanya.
 
 ## Percobaan 4 : Filter
 
+<strong> 
 1. Pipa juga digunakan untuk mengkombinasikan utilitas sistem untuk membentuk fungsi yang lebih kompleks
+</strong>
 
-   ```
-    $ w –h | grep <user>
-    $ grep <user> /etc/passwd
-    $ ls /etc | wc
-    $ ls /etc | wc –l
-    $ cat > kelas1.txt
-    Badu
-    Zulkifli
-    Yulizir
-    Yudi
-    Ade
-    [Ctrl-d]
-    $ cat > kelas2.txt
-    Budi
-    Gama
-    Asep
-    Muchlis
-    [Ctrl-d]
-    $ cat kelas1.txt kelas2.txt | sort
-    $ cat kelas1.txt kelas2.txt > kelas.txt
-    $ cat kelas.txt | sort | uniq
-   ```
+```
+ $ w –h | grep <user>
+ $ grep <user> /etc/passwd
+ $ ls /etc | wc
+ $ ls /etc | wc –l
+ $ cat > kelas1.txt
+ Badu
+ Zulkifli
+ Yulizir
+ Yudi
+ Ade
+ [Ctrl-d]
+ $ cat > kelas2.txt
+ Budi
+ Gama
+ Asep
+ Muchlis
+ [Ctrl-d]
+ $ cat kelas1.txt kelas2.txt | sort
+ $ cat kelas1.txt kelas2.txt > kelas.txt
+ $ cat kelas.txt | sort | uniq
+```
 
-   Hasil Output
+Hasil Output
 
-   ![App Screenshot](assets/img/Percobaan4_1.png)
-   ![App Screenshot](assets/img/Percobaan4_2.png)
-   ![App Screenshot](assets/img/Percobaan4_3.png)
+![App Screenshot](assets/img/Percobaan4_1.png)
+![App Screenshot](assets/img/Percobaan4_2.png)
+![App Screenshot](assets/img/Percobaan4_3.png)
 
 ## LATIHAN:
 
 1. Lihat daftar secara lengkap pada direktori aktif, belokkan tampilan standard output ke file baru.
+
+Hasil Output
+
+![App Screenshot](assets/img/latihan1.png)
+
+Analisa
+
+Perintah pertama yang digunakan dalam latihan ini adalah `ls`, yang menampilkan daftar file, kemudian menyingkirkan output dari `ls` untuk disimpan ke dalam file baru, lalu mencetak baru.
+
 2. Lihat daftar secara lengkap pada direktori /etc/passwd, belokkan tampilan standard output ke file baru tanpa menghapus file baru sebelumnya.
+   Hasil Output
+
+   ![App Screenshot](assets/img/latihan2.png)
+
+   Analisa
+
+   Menggunakan `ls` untuk melihat direktori /etc/passwd, dan membelokkan outputnya ke dalam file baru tanpa mengahapus isi dari file baru sebelumnya menggunakan operator `>>`
+
 3. Urutkan file baru dengan cara membelokkan standard input.
+   Hasil Output
+
+   ![App Screenshot](assets/img/latihan3.png)
+
+   Analisa
+
+   Untuk mengurutkan isi file baru sesuai dengan huruf pertama, gunakan perintah sort untuk memindahkan input standar dari file baru.
+
 4. Urutkan file baru dengan cara membelokkan standard input dan standard output ke file baru.urut.
+   Hasil Output
+
+   ![App Screenshot](assets/img/latihan4.png)
+
+   Analisa
+
+   Untuk mengurutkan isi file baru sesuai dengan huruf pertama, gunakan perintah sort untuk membelokkan input standar dari file baru. Dalam hal ini, file baru menjadi input dari perintah sort, dan output dari perintah sort dibelokkan ke dalam file baru.urut, dan kemudian dicetak menggunakan `cat`.
+
 5. Buatlah direktori latihan 2 sebanyak 2 kali dan belokkan standard error ke file rmdirerror.txt.
+
+   Hasil Output
+
+   ![App Screenshot](assets/img/latihan5.png)
+
+   Analisa
+
+   Setelah Anda menggunakan perintah mkdir untuk membuat direktori latihan2 dua kali, akan terjadi output error. Output error tersebut dibelokkan ke dalam file rmdierror.txt menggunakan operator pembelokan error biasa, yaitu `2>`. Kemudian Anda menggunakan perintah cat untuk mencetak file rmdierror.txt.
+
 6. Urutkan kalimat berikut :
 
    ```
@@ -381,8 +519,25 @@ Hasil Output
 
    Dengan menggunakan notasi **here document (<@@@ ...@@@)** . [HINT](https://www.geeksforgeeks.org/how-to-use-here-document-in-bash-programming/)
 
+   Hasil Output
+
+   ![App Screenshot](assets/img/latihan6.png)
+
+   Analisa
+
+   Dengan menggunakan notasi here dalam dokumen `<@....@` dan menyimpannya ke dalam file kota.txt, gunakan perintah sort untuk mengurutkan isi file.
+
 7. Hitung jumlah baris, kata dan karakter dari file baru.urut dengan menggunakan filter dan tambahkan data tersebut ke file baru.
+   Hasil Output
+
+   ![App Screenshot](assets/img/latihan7.png)
+
+   Analisa
+
+   Membelokkan standard input dari `cat`, sehingga file baru.urut menjadi input untuk perintah `cat`. Lalu dengan menggunakan pipeline dilanjutkan dengan perintah `wc`untuk menghitung jumlah baris, kata dan karakter dari file baru.urut. Output dari perintah yang tadi dibelokkan menuju file baru tanpa menghapus isi dari file baru sebelumnya menggunakan operator `>>`
+
 8. Gunakan perintah di bawah ini dan perhatikan hasilnya.
+
    ```
     $ cat > hello.txt
     dog cat
@@ -395,6 +550,14 @@ Hasil Output
     $ cat hello.txt | sort | uniq
     $ cat hello.txt | grep “dog” | grep –v “cat”
    ```
+
+Hasil Output
+
+![App Screenshot](assets/img/latihan8.png)
+
+Analisa
+
+Dengan menggunakan perintah `$ cat > hello.txt`, Anda membuat file baru bernama "hello.txt" yang berisi beberapa baris teks yang berisi kata-kata seperti "dog", "cat", "kuda", dan "ayam". Kemudian, dengan menggunakan perintah `$ cat hello.txt | sort | uniq`, Anda membaca isi file "hello.txt" secara alfabetis dan kemudian menggunakan uniq untuk menghilangkan setiap kata
 
 ## LAPORAN RESMI:
 
