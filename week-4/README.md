@@ -581,14 +581,14 @@ Redirection, Pipeline, dan Commands yang disebutkan di atas adalah komponen pent
 - Redirection: Dalam UNIX/Linux, proses mengalihkan aliran data standar masukan (stdin), standar keluaran (stdout), dan standar kesalahan (stderr) dikenal sebagai redirection.
 - Pipeline memungkinkan pengguna mengalirkan keluaran dari satu perintah ke masukan perintah lain secara langsung tanpa menyimpannya ke dalam file sementara. Contoh penggunaan redirection adalah >, <, >>, dan 2>. Ini memungkinkan pengguna melakukan tugas yang kompleks dengan menggabungkan beberapa perintah bersama-sama. Simbol "|" menandai pipa. Misalnya, komando 1 dan komando 2 akan mengalirkan keluaran dari.
 - Perintah-perintah:
-  `echo` Menampilkan teks atau variabel ke output standar.
-  `cat` Membaca isi file dan menampilkannya di output standar.
-  `more` Menampilkan isi file satu layar pada satu waktu.
-  `sort` Mengurutkan baris-baris inputnya berdasarkan urutan ASCII.
-  `grep` Mengambil inputnya dan mencari pola yang cocok, lalu menampilkan baris yang sesuai.
-  `wc` Menghitung jumlah baris, kata, dan karakter dari inputnya.
-  `cut` Memotong kolom-kolom tertentu dari inputnya.
-  `uniq` Menghilangkan baris duplikat berturut-turut dari inputnya.
+  - `echo` Menampilkan teks atau variabel ke output standar.
+  - `cat` Membaca isi file dan menampilkannya di output standar.
+  - `more` Menampilkan isi file satu layar pada satu waktu.
+  - `sort` Mengurutkan baris-baris inputnya berdasarkan urutan ASCII.
+  - `grep` Mengambil inputnya dan mencari pola yang cocok, lalu menampilkan baris yang sesuai.
+  - `wc` Menghitung jumlah baris, kata, dan karakter dari inputnya.
+  - `cut` Memotong kolom-kolom tertentu dari inputnya.
+  - `uniq` Menghilangkan baris duplikat berturut-turut dari inputnya.
 
 ## LAPORAN RESMI:
 
