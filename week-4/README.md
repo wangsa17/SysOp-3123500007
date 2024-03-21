@@ -100,9 +100,24 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
 ## Jawablah pertanyaan-pertanyaan di bawah ini :
 
 1. Apa yang dimaksud redirection?
+
+   - Pembelokan dilakukan untuk standard input, output dan error, yaitu untuk mengalihkan file descriptor dari 0, 1 dan 2.
+
 2. Apa yang dimaksud pipeline?
+
+   - Suatu mekanisme pipa yang digunakan sebagai alat komunikasi antar proses.
+
 3. Apa yang dimaksud perintah di bawah ini :
    echo, cat, more, sort, grep, wc, cut, uniq
+
+   - `echo` : digunakan untuk menampilkan text.
+     `cat` : perintah untuk melihat isi file.
+     `more` : digunakan untuk membuka file satu per satu.
+     `sort` : digunakan untuk mengurutkan .masukannya berdasarkan urutan nomor ASCII dari karakter.
+     `grep` : digunakan untuk menyaring masukannya dan menampilkan baris-baris yang hanya mengandung pola yang ditentukan.
+     `wc` : digunakan untuk menghitung jumlah baris, kata dan karakter dari baris-baris masukan yang diberikan kepadanya.
+     `cut` : digunakan untuk mengambil kolom tertentu dari baris-baris masukannya,
+     `uniq` : digunakan untuk menghilangkan baris-baris berurutan yang mengalami duplikasi, biasanya digabungkan dalam pipeline dengan sort.
 
 ## PERCOBAAN:
 
@@ -557,7 +572,23 @@ Hasil Output
 
 Analisa
 
-Dengan menggunakan perintah `$ cat > hello.txt`, Anda membuat file baru bernama "hello.txt" yang berisi beberapa baris teks yang berisi kata-kata seperti "dog", "cat", "kuda", dan "ayam". Kemudian, dengan menggunakan perintah `$ cat hello.txt | sort | uniq`, Anda membaca isi file "hello.txt" secara alfabetis dan kemudian menggunakan uniq untuk menghilangkan setiap kata
+Dengan menggunakan perintah `$ cat > hello.txt`, Anda membuat file baru bernama "hello.txt" yang berisi beberapa baris teks yang berisi kata-kata seperti "dog", "cat", "kuda", dan "ayam". Kemudian, dengan menggunakan perintah `$ cat hello.txt | sort | uniq`, Anda membaca isi file "hello.txt" secara alfabetis dan kemudian menggunakan uniq untuk menghilangkan setiap kata.
+
+## Kesimpulan
+
+Redirection, Pipeline, dan Commands yang disebutkan di atas adalah komponen penting sistem operasi UNIX/Linux dan digunakan untuk mengatur aliran data, mengatur file, dan melakukan operasi teks.
+
+- Redirection: Dalam UNIX/Linux, proses mengalihkan aliran data standar masukan (stdin), standar keluaran (stdout), dan standar kesalahan (stderr) dikenal sebagai redirection.
+- Pipeline memungkinkan pengguna mengalirkan keluaran dari satu perintah ke masukan perintah lain secara langsung tanpa menyimpannya ke dalam file sementara. Contoh penggunaan redirection adalah >, <, >>, dan 2>. Ini memungkinkan pengguna melakukan tugas yang kompleks dengan menggabungkan beberapa perintah bersama-sama. Simbol "|" menandai pipa. Misalnya, komando 1 dan komando 2 akan mengalirkan keluaran dari.
+- Perintah-perintah:
+  `echo` Menampilkan teks atau variabel ke output standar.
+  `cat` Membaca isi file dan menampilkannya di output standar.
+  `more` Menampilkan isi file satu layar pada satu waktu.
+  `sort` Mengurutkan baris-baris inputnya berdasarkan urutan ASCII.
+  `grep` Mengambil inputnya dan mencari pola yang cocok, lalu menampilkan baris yang sesuai.
+  `wc` Menghitung jumlah baris, kata, dan karakter dari inputnya.
+  `cut` Memotong kolom-kolom tertentu dari inputnya.
+  `uniq` Menghilangkan baris duplikat berturut-turut dari inputnya.
 
 ## LAPORAN RESMI:
 
