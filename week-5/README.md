@@ -81,19 +81,49 @@ Utilitas untuk melakukan pengontrolan proses dapat ditemukan pada sistem UNIX ad
 
 Jawablah pertanyaan-pertanyaan di bawah ini :
 
-1.  Apa yang dimaksud dengan proses ?
+1. Apa yang dimaksud dengan proses ?
 
-2.  Apa yang dimaksud perintah untuk menampilkan status proses :
-    ps, pstree.
+   Proses adalah program yang sedang dieksekusi.
+
+2. Apa yang dimaksud perintah untuk menampilkan status proses : ps,pstree
+
+- Ps adalah Perintah yang dapat digunakan untuk menunjukkan semua proses yang sedang berjalan pada mesin (bukan hanya proses pada shell saat ini). Instruksi ps (processstatus) digunakan untuk melihat kondisi proses yang ada.
+
+- Pstree Sama halnya dengan perintah ps. Pstree juga mempunyai fungsi yang sama untuk melihat status proses yang berjalan pada sistem. Tetapi informasinya di perlihat dengan bentuk tree (pohon)
 
 3.  Sebutkan opsi yang dapat diberikan pada perintah ps
 
-4.  Apa yang dimaksud dengan sinyal ? Apa perintah untuk mengirim sinyal ?
+    a. $ps untuk melihat kondisi proses yang ada
 
-5.  Apa yang dimaksud dengan proses foreground dan background pada job control ?
+    b. $ps -u untuk melihat faktor/element lainnya
 
-6.  Apa yang dimaksud perintah-perintah penjadwalan prioritas :
-    top, nice, renice.
+    c. $ps -u <user> mencari proses yang spesifik pemakai
+
+    d. $ps -a mencari proses lainnya (all)
+
+    e. $ps -au mencari proses lainnya (all user)
+
+    f. $ps -eH untuk semua proses, H untuk hirarki tampilan proses
+
+    g. $ps -e f menampilkan status proses dengan karakter grafis
+
+4.  Apa yang dimaksud dengan sinyal?Apa perintah untuk mengirim sinyal?
+
+    Sinyal adalah pesan yang dikirim oleh sistem operasi atau proses lain ke proses atau thread untuk memberikan notifikasi atau meminta tindakan tertentu. Proses dapat mengirim dan menerima sinyal dari dan ke proses lainnya.
+
+    Proses mengirim sinyal melalui instruksi “kill” dengan format kill [-nomor sinyal] PID
+
+5.  Apa yang dimaksud dengan proses foreground dan background pada job control
+
+    Pada foreground hanya diperuntukkan untuk satu job pada satu waktu. Job pada foreground akan mengontrol shell - menerima input dari keyboard dan mengirim output ke layar. Job pada background tidak menerima input dari terminal, biasanya berjalan tanpa memerlukan interaksi.
+
+6.  Apa yang dimaksud perintah - perintah penjadwalan prioritas :
+
+    a.Top : Memonitor aktifitas system.
+
+    b.Nice : mengubah prioritas pada proses.
+
+    c. Renice : mengurangi prioritas pada proses.
 
 #### PERCOBAAN:
 
